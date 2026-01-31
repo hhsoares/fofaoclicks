@@ -55,7 +55,7 @@ texture_filter = 1
 position = Vector2(688.5, 247.25)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.35551944
+frame_progress = 0.021333946
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2(693, 266.5)
@@ -71,3 +71,10 @@ offset_top = 56.0
 offset_right = 1055.0
 offset_bottom = 79.0
 text = "0 Points"
+
+[node name="PPSLabel" type="Label" parent="."]
+offset_left = 962.0
+offset_top = 90.0
+offset_right = 1095.0
+offset_bottom = 113.0
+text = "0 Points / Second"
