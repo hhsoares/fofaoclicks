@@ -56,7 +56,7 @@ texture_filter = 1
 position = Vector2(688.5, 247.25)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.32492864
+frame_progress = 0.76485854
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2(693, 266.5)

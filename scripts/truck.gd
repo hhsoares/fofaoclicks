@@ -10,11 +10,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	Global.points += Global.points_per_second * delta
 	points_label.text = "%d Points" % int(Global.points)
-	pps_label.text = str(Global.points_per_second) + " Points/Second"
+	pps_label.text = "%.1f Points/Second" % Global.points_per_second
 
 func _input_event(_viewport, event, _shape_idx) -> void:
 	if event is InputEventMouseButton \
 	and event.button_index == MOUSE_BUTTON_LEFT \
 	and event.pressed:
-		Global.points += 1
-		print(Global.points)
+		Global.points += Global.points_per_click
