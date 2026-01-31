@@ -52,11 +52,22 @@ script = ExtResource("2_sugp2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Truck"]
 texture_filter = 1
-position = Vector2(372.5, 232.75)
+position = Vector2(688.5, 247.25)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.49598438
+frame_progress = 0.35551944
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
-position = Vector2(377, 252)
+position = Vector2(693, 266.5)
 shape = SubResource("RectangleShape2D_o5qli")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 301.0
+offset_bottom = 646.0
+
+[node name="PointsLabel" type="Label" parent="."]
+offset_left = 993.0
+offset_top = 56.0
+offset_right = 1055.0
+offset_bottom = 79.0
+text = "0 Points"

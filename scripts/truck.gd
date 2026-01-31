@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
+@onready var points_label: Label = $"../PointsLabel"
 
 func _ready() -> void:
 	anim.play()
@@ -11,3 +12,4 @@ func _input_event(_viewport, event, _shape_idx) -> void:
 	and event.pressed:
 		Global.points += 1
 		print(Global.points)
+		points_label.text = str(Global.points) + " Points"
