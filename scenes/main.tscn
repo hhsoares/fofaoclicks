@@ -47,6 +47,7 @@ size = Vector2(341, 180)
 script = ExtResource("1_0wfyh")
 
 [node name="Truck" type="CharacterBody2D" parent="."]
+input_pickable = true
 script = ExtResource("2_sugp2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Truck"]
@@ -54,7 +55,7 @@ texture_filter = 1
 position = Vector2(372.5, 232.75)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.2021477
+frame_progress = 0.49598438
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2(377, 252)

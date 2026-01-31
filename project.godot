@@ -14,3 +14,7 @@ config/name="fofaoclicks"
 run/main_scene="uid://qunj4fujjcuc"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scripts/global.gd"
