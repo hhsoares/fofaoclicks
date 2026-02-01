@@ -369,6 +369,7 @@ size_flags_horizontal = 3
 [node name="TruckButton" type="Button" parent="Panel/VBoxContainer/TruckContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
+focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "UPGRADE"
@@ -401,6 +402,7 @@ size_flags_horizontal = 3
 
 [node name="FofaoButton" type="Button" parent="Panel/VBoxContainer/FofaoContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "BUY"
@@ -433,6 +435,7 @@ size_flags_horizontal = 3
 
 [node name="MickeyButton" type="Button" parent="Panel/VBoxContainer/MickeyContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "BUY"
@@ -465,6 +468,7 @@ size_flags_horizontal = 3
 
 [node name="CAButton" type="Button" parent="Panel/VBoxContainer/CAContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "BUY"
@@ -497,6 +501,7 @@ size_flags_horizontal = 3
 
 [node name="HAButton" type="Button" parent="Panel/VBoxContainer/HAContainer/HBoxContainer"]
 layout_mode = 2
+focus_mode = 0
 mouse_filter = 1
 mouse_default_cursor_shape = 2
 text = "BUY"
