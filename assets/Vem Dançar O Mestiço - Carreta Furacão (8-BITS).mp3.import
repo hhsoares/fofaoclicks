@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bscppc830pssy"
+path="res://.godot/imported/Vem Dançar O Mestiço - Carreta Furacão (8-BITS).mp3-389c4b80ae59534e1a334f69018b3eca.mp3str"
+
+[deps]
+
+source_file="res://assets/Vem Dançar O Mestiço - Carreta Furacão (8-BITS).mp3"
+dest_files=["res://.godot/imported/Vem Dançar O Mestiço - Carreta Furacão (8-BITS).mp3-389c4b80ae59534e1a334f69018b3eca.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
