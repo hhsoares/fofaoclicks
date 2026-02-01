@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://2x4nw03h3eex"
-path="res://.godot/imported/Honk-Regular-VariableFont_MORF,SHLN.ttf-360e54b005f0a329b42e4b3989138d9e.fontdata"
+uid="uid://cyhd0dq0bji7y"
+path="res://.godot/imported/SeymourOne-Regular.ttf-f7261d8a14bbafa33134f056ce90f87d.fontdata"
 
 [deps]
 
-source_file="res://assets/Honk/Honk-Regular-VariableFont_MORF,SHLN.ttf"
-dest_files=["res://.godot/imported/Honk-Regular-VariableFont_MORF,SHLN.ttf-360e54b005f0a329b42e4b3989138d9e.fontdata"]
+source_file="res://assets/Seymour_One/SeymourOne-Regular.ttf"
+dest_files=["res://.godot/imported/SeymourOne-Regular.ttf-f7261d8a14bbafa33134f056ce90f87d.fontdata"]
 
 [params]
 
