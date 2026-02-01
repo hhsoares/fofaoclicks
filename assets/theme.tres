@@ -1,0 +1,19 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://c47v0wl70clla"]
+
+[ext_resource type="FontFile" uid="uid://2x4nw03h3eex" path="res://assets/Honk/Honk-Regular-VariableFont_MORF,SHLN.ttf" id="1_5x3i2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5x3i2"]
+bg_color = Color(0.93427396, 0.6304824, 0.64686316, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wl1kw"]
+bg_color = Color(0.7990009, 0.50583804, 0.53395224, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lu33j"]
+bg_color = Color(0.7569237, 0.21878663, 0.55019486, 1)
+
+[resource]
+Button/font_sizes/font_size = 43
+Button/fonts/font = ExtResource("1_5x3i2")
+Button/styles/hover = SubResource("StyleBoxFlat_5x3i2")
+Button/styles/normal = SubResource("StyleBoxFlat_wl1kw")
+Button/styles/pressed = SubResource("StyleBoxFlat_lu33j")
