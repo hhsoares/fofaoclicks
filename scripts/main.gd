@@ -51,7 +51,7 @@ func _on_truck_button_pressed() -> void:
 		Global.points_per_second += 1.0
 		Global.points_per_click += 1.0
 		truck_level += 1
-		truck_label.text = "Truck level %d" % truck_level
+		truck_label.text = "Level %d" % truck_level
 		update_points_label()
 
 func _on_mickey_button_pressed() -> void:
