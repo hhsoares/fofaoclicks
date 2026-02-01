@@ -13,6 +13,11 @@ extends Node2D
 @onready var ca_cost: Label = $Panel/VBoxContainer/CAContainer/HBoxContainer/CACost
 @onready var ha_cost: Label = $Panel/VBoxContainer/HAContainer/HBoxContainer/HACost
 
+@onready var fofao_button: Button = $Panel/VBoxContainer/FofaoContainer/HBoxContainer/FofaoButton
+@onready var mickey_button: Button = $Panel/VBoxContainer/MickeyContainer/HBoxContainer/MickeyButton
+@onready var ca_button: Button = $Panel/VBoxContainer/CAContainer/HBoxContainer/CAButton
+@onready var ha_button: Button = $Panel/VBoxContainer/HAContainer/HBoxContainer/HAButton
+
 @onready var fofao: Node2D = $Fofao
 @onready var mickey: Node2D = $Mickey
 @onready var ca: Node2D = $CapitaoAmerica
@@ -40,12 +45,7 @@ func _ready() -> void:
 	ca.visible = false
 	ha.visible = false
 
-	# Init labels
 	truck_label.text = "Carreta Furacão Level %d" % truck_level
-	fofao_label.text = "Fofão Level %d" % fofao_level
-	mickey_label.text = "Mickey Level %d" % mickey_level
-	ca_label.text = "Captain America Level %d" % ca_level
-	ha_label.text = "Spiderman Level %d" % ha_level
 
 	update_points_label()
 	update_cost_labels()
@@ -65,6 +65,8 @@ func update_cost_labels() -> void:
 	ha_cost.text = "%d" % get_upgrade_cost(HA_BASE_COST, ha_level)
 
 func _on_fofao_button_pressed() -> void:
+	var was_first_buy := (fofao_level == 0)
+
 	var cost := get_upgrade_cost(FOFAO_BASE_COST, fofao_level)
 	if Global.points < cost:
 		return
@@ -78,6 +80,9 @@ func _on_fofao_button_pressed() -> void:
 
 	fofao_level += 1
 	fofao_label.text = "Fofão Level %d" % fofao_level
+
+	if was_first_buy:
+		fofao_button.text = "UPGRADE"
 
 	update_points_label()
 	update_cost_labels()
@@ -98,6 +103,8 @@ func _on_truck_button_pressed() -> void:
 	update_cost_labels()
 
 func _on_mickey_button_pressed() -> void:
+	var was_first_buy := (mickey_level == 0)
+
 	var cost := get_upgrade_cost(MICKEY_BASE_COST, mickey_level)
 	if Global.points < cost:
 		return
@@ -112,10 +119,16 @@ func _on_mickey_button_pressed() -> void:
 	mickey_level += 1
 	mickey_label.text = "Mickey Level %d" % mickey_level
 
+	if was_first_buy:
+		mickey_button.text = "UPGRADE"
+
 	update_points_label()
 	update_cost_labels()
 
+
 func _on_ca_button_pressed() -> void:
+	var was_first_buy := (ca_level == 0)
+
 	var cost := get_upgrade_cost(CA_BASE_COST, ca_level)
 	if Global.points < cost:
 		return
@@ -128,12 +141,18 @@ func _on_ca_button_pressed() -> void:
 	ca.get_node("AnimatedSprite2D").play("default")
 
 	ca_level += 1
-	ca_label.text = "Captain America Level %d" % ca_level
+	ca_label.text = "Capitão America Level %d" % ca_level
+
+	if was_first_buy:
+		ca_button.text = "UPGRADE"
 
 	update_points_label()
 	update_cost_labels()
 
+
 func _on_ha_button_pressed() -> void:
+	var was_first_buy := (ha_level == 0)
+
 	var cost := get_upgrade_cost(HA_BASE_COST, ha_level)
 	if Global.points < cost:
 		return
@@ -146,7 +165,10 @@ func _on_ha_button_pressed() -> void:
 	ha.get_node("AnimatedSprite2D").play("default")
 
 	ha_level += 1
-	ha_label.text = "Spiderman Level %d" % ha_level
+	ha_label.text = "Homem Aranha Level %d" % ha_level
+
+	if was_first_buy:
+		ha_button.text = "UPGRADE"
 
 	update_points_label()
 	update_cost_labels()
