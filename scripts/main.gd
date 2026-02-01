@@ -114,7 +114,7 @@ func _on_mickey_button_pressed() -> void:
 	Global.points_per_click += 1.0
 
 	mickey.visible = true
-	mickey.get_node("AnimatedSprite2D").play("default")
+	mickey.get_node("AnimatedSprite2D").play("mickey")
 
 	mickey_level += 1
 	mickey_label.text = "Mickey Level %d" % mickey_level
@@ -138,7 +138,7 @@ func _on_ca_button_pressed() -> void:
 	Global.points_per_click += 1.0
 
 	ca.visible = true
-	ca.get_node("AnimatedSprite2D").play("default")
+	ca.get_node("AnimatedSprite2D").play("ca")
 
 	ca_level += 1
 	ca_label.text = "Capitão America Level %d" % ca_level
