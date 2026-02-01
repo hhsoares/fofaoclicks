@@ -162,7 +162,7 @@ func _on_ha_button_pressed() -> void:
 	Global.points_per_click += 1.0
 
 	ha.visible = true
-	ha.get_node("AnimatedSprite2D").play("default")
+	ha.get_node("AnimatedSprite2D").play("miranha")
 
 	ha_level += 1
 	ha_label.text = "Homem Aranha Level %d" % ha_level

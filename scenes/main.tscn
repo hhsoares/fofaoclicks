@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://bkbrcw0s7sfiu"]
+[gd_scene load_steps=41 format=3 uid="uid://bkbrcw0s7sfiu"]
 
 [ext_resource type="Script" uid="uid://ckbd4lsw1t0bv" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://d27v33g1y0yuf" path="res://assets/kwid.png" id="1_o5qli"]
@@ -12,6 +12,8 @@
 [ext_resource type="Texture2D" uid="uid://ddxsjfmmk71w3" path="res://assets/mickey2.png" id="7_choun"]
 [ext_resource type="Texture2D" uid="uid://drlxf657xxger" path="res://assets/capitao1.png" id="8_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://osfkfhx6cqe8" path="res://assets/capitao2.png" id="9_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://bfgpiao6rvpr5" path="res://assets/miranha1.png" id="13_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://cv4qogytdi5gf" path="res://assets/miranha2.png" id="14_jkv2x"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wfyh"]
 atlas = ExtResource("1_o5qli")
@@ -227,6 +229,17 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_a8y0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_jkv2x")
+}],
+"loop": true,
+"name": &"miranha",
+"speed": 5.0
 }]
 
 [node name="Main" type="Node2D"]
@@ -412,6 +425,7 @@ frame_progress = 0.5686352
 position = Vector2(892, 558)
 scale = Vector2(2.109, 2.109)
 sprite_frames = SubResource("SpriteFrames_y6deb")
+animation = &"miranha"
 
 [connection signal="pressed" from="Panel/VBoxContainer/TruckContainer/HBoxContainer/TruckButton" to="." method="_on_truck_button_pressed"]
 [connection signal="pressed" from="Panel/VBoxContainer/FofaoContainer/HBoxContainer/FofaoButton" to="." method="_on_fofao_button_pressed"]
