@@ -92,7 +92,7 @@ texture_filter = 1
 position = Vector2(688.5, 247.25)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.12725441
+frame_progress = 0.78943473
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2(693, 266.5)
@@ -117,6 +117,22 @@ offset_top = 189.0
 offset_right = 202.0
 offset_bottom = 317.0
 texture_normal = ExtResource("4_jyhfs")
+
+[node name="TruckLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 160.0
+offset_right = 206.0
+offset_bottom = 183.0
+text = "Truck level 1"
+
+[node name="FofaoLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 334.0
+offset_right = 173.0
+offset_bottom = 357.0
+text = "Buy Fofão"
 
 [node name="PointsLabel" type="Label" parent="."]
 offset_left = 993.0
