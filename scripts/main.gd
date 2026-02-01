@@ -40,7 +40,7 @@ func _on_fofao_button_pressed() -> void:
 		Global.points_per_second += 1.0
 		Global.points_per_click += 1.0
 		fofao.visible = true
-		fofao.get_node("AnimatedSprite2D").play("default")
+		fofao.get_node("AnimatedSprite2D").play("fofao")
 		fofao_level += 1
 		fofao_label.text = "Fofão level %d" % fofao_level
 		update_points_label()

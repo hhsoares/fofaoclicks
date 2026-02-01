@@ -1,8 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://bkbrcw0s7sfiu"]
+[gd_scene load_steps=32 format=3 uid="uid://bkbrcw0s7sfiu"]
 
 [ext_resource type="Script" uid="uid://ckbd4lsw1t0bv" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://d27v33g1y0yuf" path="res://assets/kwid.png" id="1_o5qli"]
 [ext_resource type="Script" uid="uid://clb7xq6wd08yf" path="res://scripts/truck.gd" id="2_sugp2"]
+[ext_resource type="Texture2D" uid="uid://benikvmarngcc" path="res://assets/fofus1.png" id="4_tbgi4"]
+[ext_resource type="Texture2D" uid="uid://bfgiihu8wlsd4" path="res://assets/fofus2.png" id="5_tefeu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0wfyh"]
 atlas = ExtResource("1_o5qli")
@@ -76,6 +78,17 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tbgi4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tefeu")
+}],
+"loop": true,
+"name": &"fofao",
 "speed": 5.0
 }]
 
@@ -321,6 +334,8 @@ texture_filter = 1
 position = Vector2(448, 426)
 scale = Vector2(2.109, 3.268)
 sprite_frames = SubResource("SpriteFrames_choun")
+animation = &"fofao"
+frame_progress = 0.4776052
 
 [node name="Mickey" type="Node2D" parent="."]
 
