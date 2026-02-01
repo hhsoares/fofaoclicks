@@ -24,14 +24,25 @@ extends Node2D
 @onready var ha: Node2D = $HomemAranha
 
 # Base costs (level 0 -> 1)
-const FOFAO_BASE_COST := 10
-const TRUCK_BASE_COST := 20
-const MICKEY_BASE_COST := 30
-const CA_BASE_COST := 40
-const HA_BASE_COST := 50
+const FOFAO_BASE_COST := 100
+const TRUCK_BASE_COST := 8
+const MICKEY_BASE_COST := 900
+const CA_BASE_COST := 7000
+const HA_BASE_COST := 25000
 
-# Cost growth per purchase: cost = ceil(base * (multiplier ^ level))
+# Exponential cost growth per purchase
 const COST_MULTIPLIER := 1.25
+
+# Gain scaling: every 5 levels, gains are multiplied by 1.25
+const LEVEL_STEP := 5
+const POWER_MULTIPLIER := 1.25
+
+# Base gains (before scaling)
+const FOFAO_BASE_PPS_GAIN := 5.0
+const MICKEY_BASE_PPS_GAIN := 25.0
+const CA_BASE_PPS_GAIN := 140.0
+const HA_BASE_PPS_GAIN := 1000.0
+const TRUCK_BASE_PPC_GAIN := 0.34
 
 var truck_level := 1
 var fofao_level := 0
@@ -54,8 +65,11 @@ func update_points_label() -> void:
 	points_label.text = "%d Points" % int(Global.points)
 
 func get_upgrade_cost(base_cost: int, level: int) -> int:
-	# level is current level; buying next one increases cost based on current level
 	return int(ceil(base_cost * pow(COST_MULTIPLIER, level)))
+
+func scaled_gain(base_gain: float, level: int) -> float:
+	var tier := level / LEVEL_STEP # integer division
+	return base_gain * pow(POWER_MULTIPLIER, tier)
 
 func update_cost_labels() -> void:
 	truck_cost.text = "%d" % get_upgrade_cost(TRUCK_BASE_COST, truck_level)
@@ -72,8 +86,7 @@ func _on_fofao_button_pressed() -> void:
 		return
 
 	Global.points -= cost
-	Global.points_per_second += 1.0
-	Global.points_per_click += 1.0
+	Global.points_per_second += scaled_gain(FOFAO_BASE_PPS_GAIN, fofao_level)
 
 	fofao.visible = true
 	fofao.get_node("AnimatedSprite2D").play("fofao")
@@ -93,8 +106,7 @@ func _on_truck_button_pressed() -> void:
 		return
 
 	Global.points -= cost
-	Global.points_per_second += 1.0
-	Global.points_per_click += 1.0
+	Global.points_per_click += scaled_gain(TRUCK_BASE_PPC_GAIN, truck_level)
 
 	truck_level += 1
 	truck_label.text = "Carreta Furacão Level %d" % truck_level
@@ -110,8 +122,7 @@ func _on_mickey_button_pressed() -> void:
 		return
 
 	Global.points -= cost
-	Global.points_per_second += 1.0
-	Global.points_per_click += 1.0
+	Global.points_per_second += scaled_gain(MICKEY_BASE_PPS_GAIN, mickey_level)
 
 	mickey.visible = true
 	mickey.get_node("AnimatedSprite2D").play("mickey")
@@ -125,7 +136,6 @@ func _on_mickey_button_pressed() -> void:
 	update_points_label()
 	update_cost_labels()
 
-
 func _on_ca_button_pressed() -> void:
 	var was_first_buy := (ca_level == 0)
 
@@ -134,8 +144,7 @@ func _on_ca_button_pressed() -> void:
 		return
 
 	Global.points -= cost
-	Global.points_per_second += 1.0
-	Global.points_per_click += 1.0
+	Global.points_per_second += scaled_gain(CA_BASE_PPS_GAIN, ca_level)
 
 	ca.visible = true
 	ca.get_node("AnimatedSprite2D").play("ca")
@@ -149,7 +158,6 @@ func _on_ca_button_pressed() -> void:
 	update_points_label()
 	update_cost_labels()
 
-
 func _on_ha_button_pressed() -> void:
 	var was_first_buy := (ha_level == 0)
 
@@ -158,8 +166,7 @@ func _on_ha_button_pressed() -> void:
 		return
 
 	Global.points -= cost
-	Global.points_per_second += 1.0
-	Global.points_per_click += 1.0
+	Global.points_per_second += scaled_gain(HA_BASE_PPS_GAIN, ha_level)
 
 	ha.visible = true
 	ha.get_node("AnimatedSprite2D").play("miranha")
