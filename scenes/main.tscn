@@ -92,7 +92,7 @@ texture_filter = 1
 position = Vector2(688.5, 247.25)
 scale = Vector2(2.671875, 3.8076923)
 sprite_frames = SubResource("SpriteFrames_tefeu")
-frame_progress = 0.8820269
+frame_progress = 0.12725441
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Truck"]
 position = Vector2(693, 266.5)
@@ -102,12 +102,20 @@ shape = SubResource("RectangleShape2D_o5qli")
 offset_right = 301.0
 offset_bottom = 646.0
 
-[node name="TextureButton" type="TextureButton" parent="Panel"]
+[node name="TruckButton" type="TextureButton" parent="Panel"]
 layout_mode = 0
 offset_left = 76.0
-offset_top = 42.0
+offset_top = 28.0
 offset_right = 204.0
-offset_bottom = 170.0
+offset_bottom = 156.0
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="FofaoButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 74.0
+offset_top = 189.0
+offset_right = 202.0
+offset_bottom = 317.0
 texture_normal = ExtResource("4_jyhfs")
 
 [node name="PointsLabel" type="Label" parent="."]
@@ -124,12 +132,13 @@ offset_right = 1095.0
 offset_bottom = 113.0
 text = "0 Points / Second"
 
-[node name="kwid" type="Node2D" parent="."]
+[node name="Fofao" type="Node2D" parent="."]
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="kwid"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Fofao"]
 texture_filter = 1
 position = Vector2(495, 442)
 scale = Vector2(1.546875, 2.397436)
 sprite_frames = SubResource("SpriteFrames_choun")
 
-[connection signal="pressed" from="Panel/TextureButton" to="." method="_on_texture_button_pressed"]
+[connection signal="pressed" from="Panel/TruckButton" to="." method="_on_truck_button_pressed"]
+[connection signal="pressed" from="Panel/FofaoButton" to="." method="_on_fofao_button_pressed"]
