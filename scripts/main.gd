@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var points_label: Label = $PointsLabel
 
-@onready var kwid: AnimatableBody2D = $kwid
+@onready var kwid: Node2D = $kwid
 
 const UPGRADE_COST := 10
 
@@ -16,6 +16,7 @@ func _on_texture_button_pressed() -> void:
 		Global.points_per_second += 1.0
 		Global.points_per_click += 1.0
 		kwid.visible = true
+		kwid.get_node("AnimatedSprite2D").play("default")
 		update_points_label()
 
 func update_points_label() -> void:
