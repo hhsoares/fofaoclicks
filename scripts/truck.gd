@@ -5,7 +5,7 @@ extends CharacterBody2D
 @onready var pps_label: Label = $"../Panel/VBoxContainer/PPSLabel"
 
 func _ready() -> void:
-	anim.play()
+	anim.play("default")
 
 func _process(delta: float) -> void:
 	Global.points += Global.points_per_second * delta
@@ -13,7 +13,9 @@ func _process(delta: float) -> void:
 	pps_label.text = "%.1f Points/Second" % Global.points_per_second
 
 func _input_event(_viewport, event, _shape_idx) -> void:
-	if event is InputEventMouseButton \
-	and event.button_index == MOUSE_BUTTON_LEFT \
-	and event.pressed:
-		Global.points += Global.points_per_click
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			Global.points += Global.points_per_click
+			anim.play("pressed")
+		else:
+			anim.play("default")
