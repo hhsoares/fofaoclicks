@@ -1,7 +1,8 @@
-[gd_scene load_steps=38 format=3 uid="uid://bkbrcw0s7sfiu"]
+[gd_scene load_steps=39 format=3 uid="uid://bkbrcw0s7sfiu"]
 
 [ext_resource type="Script" uid="uid://ckbd4lsw1t0bv" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://d27v33g1y0yuf" path="res://assets/kwid.png" id="1_o5qli"]
+[ext_resource type="Texture2D" uid="uid://ch1mi0cjwf0ls" path="res://assets/CASAS.png" id="2_eb6dy"]
 [ext_resource type="Script" uid="uid://clb7xq6wd08yf" path="res://scripts/truck.gd" id="2_sugp2"]
 [ext_resource type="Texture2D" uid="uid://6gio2sg38syh" path="res://assets/rua.png" id="2_ya4ey"]
 [ext_resource type="Texture2D" uid="uid://ympl6axofpnw" path="res://assets/calçada.png" id="3_eb6dy"]
@@ -232,16 +233,27 @@ animations = [{
 script = ExtResource("1_0wfyh")
 
 [node name="Rua" type="Sprite2D" parent="."]
-position = Vector2(577.25, 324.625)
-scale = Vector2(2.0381207, 2.8855557)
+position = Vector2(577, -1.0000019)
+scale = Vector2(2.0381207, 5.325555)
 texture = ExtResource("2_ya4ey")
 
-[node name="Calçada" type="Sprite2D" parent="Rua"]
-position = Vector2(0.24531174, 0.08664513)
-scale = Vector2(0.99912995, 0.99768966)
+[node name="Calçada2" type="Sprite2D" parent="Rua"]
+position = Vector2(-0.98130786, 92.760284)
+scale = Vector2(1.0055819, 0.82537425)
 texture = ExtResource("3_eb6dy")
 
+[node name="Calçada" type="Sprite2D" parent="Rua"]
+position = Vector2(0.24533081, 40.441784)
+scale = Vector2(0.99912983, 0.33027327)
+texture = ExtResource("3_eb6dy")
+
+[node name="Casas" type="Sprite2D" parent="Rua"]
+position = Vector2(0.49066162, 39.432514)
+scale = Vector2(0.9995649, 0.42582935)
+texture = ExtResource("2_eb6dy")
+
 [node name="Truck" type="CharacterBody2D" parent="."]
+position = Vector2(-18, 116)
 input_pickable = true
 script = ExtResource("2_sugp2")
 
@@ -369,7 +381,7 @@ text = "BUY"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Fofao"]
 texture_filter = 1
-position = Vector2(448, 426)
+position = Vector2(424, 411)
 scale = Vector2(2.109, 3.268)
 sprite_frames = SubResource("SpriteFrames_choun")
 animation = &"fofao"
@@ -378,7 +390,7 @@ frame_progress = 0.4776052
 [node name="Mickey" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mickey"]
-position = Vector2(604, 472)
+position = Vector2(583, 531)
 scale = Vector2(2.109, 2.936)
 sprite_frames = SubResource("SpriteFrames_a8y0u")
 animation = &"mickey"
@@ -387,7 +399,7 @@ frame_progress = 0.29409492
 [node name="CapitaoAmerica" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CapitaoAmerica"]
-position = Vector2(794.00006, 480.00003)
+position = Vector2(950.00006, 292.00003)
 scale = Vector2(2.109376, 2.397436)
 sprite_frames = SubResource("SpriteFrames_0ld40")
 animation = &"ca"
@@ -397,7 +409,7 @@ frame_progress = 0.5686352
 [node name="HomemAranha" type="Node2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HomemAranha"]
-position = Vector2(1015, 461)
+position = Vector2(892, 558)
 scale = Vector2(2.109, 2.109)
 sprite_frames = SubResource("SpriteFrames_y6deb")
 
