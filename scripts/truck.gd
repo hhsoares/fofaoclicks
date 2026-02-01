@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
-@onready var points_label: Label = $"../PointsLabel"
-@onready var pps_label: Label = $"../PPSLabel"
+@onready var points_label: Label = $"../Panel/VBoxContainer/PointsLabel"
+@onready var pps_label: Label = $"../Panel/VBoxContainer/PPSLabel"
 
 func _ready() -> void:
 	anim.play()

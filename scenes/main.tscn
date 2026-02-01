@@ -206,103 +206,79 @@ frame_progress = 0.78943473
 position = Vector2(693, 266.5)
 shape = SubResource("RectangleShape2D_o5qli")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="PanelContainer" parent="."]
 offset_right = 301.0
 offset_bottom = 646.0
 
-[node name="TruckButton" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 76.0
-offset_top = 28.0
-offset_right = 204.0
-offset_bottom = 156.0
-texture_normal = ExtResource("4_jyhfs")
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 2
 
-[node name="FofaoButton" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 74.0
-offset_top = 189.0
-offset_right = 202.0
-offset_bottom = 317.0
-texture_normal = ExtResource("4_jyhfs")
+[node name="UpgradeLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
+text = "UPGRADES"
 
-[node name="MickeyButton" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 376.0
-offset_right = 154.0
-offset_bottom = 504.0
-texture_normal = ExtResource("4_jyhfs")
-
-[node name="CAButton" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 162.0
-offset_top = 364.0
-offset_right = 290.0
-offset_bottom = 492.0
-texture_normal = ExtResource("4_jyhfs")
-
-[node name="HAButton" type="TextureButton" parent="Panel"]
-layout_mode = 0
-offset_left = 161.0
-offset_top = 507.0
-offset_right = 289.0
-offset_bottom = 635.0
-texture_normal = ExtResource("4_jyhfs")
-
-[node name="TruckLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 109.0
-offset_top = 160.0
-offset_right = 206.0
-offset_bottom = 183.0
-text = "Truck level 1"
-
-[node name="FofaoLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = 334.0
-offset_right = 173.0
-offset_bottom = 357.0
-text = "Buy Fofão"
-
-[node name="MickeyLabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 500.0
-offset_right = 108.0
-offset_bottom = 523.0
-text = "Buy Mickey"
-
-[node name="CALabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 155.0
-offset_top = 476.0
-offset_right = 316.0
-offset_bottom = 499.0
-text = "Buy Captain America"
-
-[node name="HALabel" type="Label" parent="Panel"]
-layout_mode = 0
-offset_left = 171.0
-offset_top = 610.0
-offset_right = 289.0
-offset_bottom = 633.0
-text = "Buy Spiderman"
-
-[node name="PointsLabel" type="Label" parent="."]
-offset_left = 993.0
-offset_top = 56.0
-offset_right = 1055.0
-offset_bottom = 79.0
+[node name="PointsLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
 text = "0 Points"
 
-[node name="PPSLabel" type="Label" parent="."]
-offset_left = 962.0
-offset_top = 90.0
-offset_right = 1095.0
-offset_bottom = 113.0
+[node name="PPSLabel" type="Label" parent="Panel/VBoxContainer"]
+layout_mode = 2
 text = "0 Points / Second"
+
+[node name="TruckContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="TruckButton" type="TextureButton" parent="Panel/VBoxContainer/TruckContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="TruckLabel" type="Label" parent="Panel/VBoxContainer/TruckContainer"]
+layout_mode = 2
+text = "Truck level 1"
+
+[node name="FofaoContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="FofaoButton" type="TextureButton" parent="Panel/VBoxContainer/FofaoContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="FofaoLabel" type="Label" parent="Panel/VBoxContainer/FofaoContainer"]
+layout_mode = 2
+text = "Buy Fofão"
+
+[node name="MickeyContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="MickeyButton" type="TextureButton" parent="Panel/VBoxContainer/MickeyContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="MickeyLabel" type="Label" parent="Panel/VBoxContainer/MickeyContainer"]
+layout_mode = 2
+text = "Buy Mickey"
+
+[node name="CAContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="CAButton" type="TextureButton" parent="Panel/VBoxContainer/CAContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="CALabel" type="Label" parent="Panel/VBoxContainer/CAContainer"]
+layout_mode = 2
+text = "Buy Captain America"
+
+[node name="HAContainer" type="HBoxContainer" parent="Panel/VBoxContainer"]
+layout_mode = 2
+
+[node name="HAButton" type="TextureButton" parent="Panel/VBoxContainer/HAContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="HALabel" type="Label" parent="Panel/VBoxContainer/HAContainer"]
+layout_mode = 2
+text = "Buy Spiderman"
 
 [node name="Fofao" type="Node2D" parent="."]
 
@@ -333,8 +309,8 @@ position = Vector2(1015, 461)
 scale = Vector2(2.109, 2.109)
 sprite_frames = SubResource("SpriteFrames_y6deb")
 
-[connection signal="pressed" from="Panel/TruckButton" to="." method="_on_truck_button_pressed"]
-[connection signal="pressed" from="Panel/FofaoButton" to="." method="_on_fofao_button_pressed"]
-[connection signal="pressed" from="Panel/MickeyButton" to="." method="_on_mickey_button_pressed"]
-[connection signal="pressed" from="Panel/CAButton" to="." method="_on_ca_button_pressed"]
-[connection signal="pressed" from="Panel/HAButton" to="." method="_on_ha_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/TruckContainer/TruckButton" to="." method="_on_truck_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/FofaoContainer/FofaoButton" to="." method="_on_fofao_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/MickeyContainer/MickeyButton" to="." method="_on_mickey_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/CAContainer/CAButton" to="." method="_on_ca_button_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/HAContainer/HAButton" to="." method="_on_ha_button_pressed"]

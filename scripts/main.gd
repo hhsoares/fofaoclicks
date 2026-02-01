@@ -1,11 +1,11 @@
 extends Node2D
 
-@onready var points_label: Label = $PointsLabel
-@onready var truck_label: Label = $Panel/TruckLabel
-@onready var fofao_label: Label = $Panel/FofaoLabel
-@onready var mickey_label: Label = $Panel/MickeyLabel
-@onready var ca_label: Label = $Panel/CALabel
-@onready var ha_label: Label = $Panel/HALabel
+@onready var points_label: Label = $Panel/VBoxContainer/PointsLabel
+@onready var truck_label: Label = $Panel/VBoxContainer/TruckContainer/TruckLabel
+@onready var fofao_label: Label = $Panel/VBoxContainer/FofaoContainer/FofaoLabel
+@onready var mickey_label: Label = $Panel/VBoxContainer/MickeyContainer/MickeyLabel
+@onready var ca_label: Label = $Panel/VBoxContainer/CAContainer/CALabel
+@onready var ha_label: Label = $Panel/VBoxContainer/HAContainer/HALabel
 
 @onready var fofao: Node2D = $Fofao
 @onready var mickey: Node2D = $Mickey
