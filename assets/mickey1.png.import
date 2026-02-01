@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bjw8mpoiik8w7"
-path="res://.godot/imported/fofao4.png-6e55ac38e63468a0b06e0af3ce41ae61.ctex"
+uid="uid://b0yulim4gy20m"
+path="res://.godot/imported/mickey1.png-a0b30b594c2d1d082fa006127f9b7e3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fofao4.png"
-dest_files=["res://.godot/imported/fofao4.png-6e55ac38e63468a0b06e0af3ce41ae61.ctex"]
+source_file="res://assets/mickey1.png"
+dest_files=["res://.godot/imported/mickey1.png-a0b30b594c2d1d082fa006127f9b7e3b.ctex"]
 
 [params]
 

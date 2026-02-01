@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c0wdrvbaocdme"
-path="res://.godot/imported/fofao2.png-7cbe02d9840850e84197888dcd751fa4.ctex"
+uid="uid://osfkfhx6cqe8"
+path="res://.godot/imported/capitao2.png-1662c6688d00dd31cfe384f3fc8fea3b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/fofao2.png"
-dest_files=["res://.godot/imported/fofao2.png-7cbe02d9840850e84197888dcd751fa4.ctex"]
+source_file="res://assets/capitao2.png"
+dest_files=["res://.godot/imported/capitao2.png-1662c6688d00dd31cfe384f3fc8fea3b.ctex"]
 
 [params]
 
