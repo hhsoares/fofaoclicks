@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://bkbrcw0s7sfiu"]
+[gd_scene load_steps=31 format=3 uid="uid://bkbrcw0s7sfiu"]
 
 [ext_resource type="Script" uid="uid://ckbd4lsw1t0bv" path="res://scripts/main.gd" id="1_0wfyh"]
 [ext_resource type="Texture2D" uid="uid://d27v33g1y0yuf" path="res://assets/kwid.png" id="1_o5qli"]
@@ -80,6 +80,114 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_choun"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(0, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ya4ey"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(64, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eb6dy"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(128, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trceg"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(192, 0, 64, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8y0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_choun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ya4ey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eb6dy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trceg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jkv2x"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(0, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jbj1t"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(64, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_muem4"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(128, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp3eg"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(192, 0, 64, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0ld40"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jkv2x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jbj1t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_muem4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp3eg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqmmt"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(0, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc10j"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(64, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jscy8"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(128, 0, 64, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pm3ni"]
+atlas = ExtResource("1_o5qli")
+region = Rect2(192, 0, 64, 39)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6deb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqmmt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc10j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jscy8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pm3ni")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Main" type="Node2D"]
 script = ExtResource("1_0wfyh")
 
@@ -118,6 +226,30 @@ offset_right = 202.0
 offset_bottom = 317.0
 texture_normal = ExtResource("4_jyhfs")
 
+[node name="MickeyButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 376.0
+offset_right = 154.0
+offset_bottom = 504.0
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="CAButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 162.0
+offset_top = 364.0
+offset_right = 290.0
+offset_bottom = 492.0
+texture_normal = ExtResource("4_jyhfs")
+
+[node name="HAButton" type="TextureButton" parent="Panel"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 507.0
+offset_right = 289.0
+offset_bottom = 635.0
+texture_normal = ExtResource("4_jyhfs")
+
 [node name="TruckLabel" type="Label" parent="Panel"]
 layout_mode = 0
 offset_left = 109.0
@@ -133,6 +265,30 @@ offset_top = 334.0
 offset_right = 173.0
 offset_bottom = 357.0
 text = "Buy Fofão"
+
+[node name="MickeyLabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 500.0
+offset_right = 108.0
+offset_bottom = 523.0
+text = "Buy Mickey"
+
+[node name="CALabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 155.0
+offset_top = 476.0
+offset_right = 316.0
+offset_bottom = 499.0
+text = "Buy Captain America"
+
+[node name="HALabel" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 171.0
+offset_top = 610.0
+offset_right = 289.0
+offset_bottom = 633.0
+text = "Buy Spiderman"
 
 [node name="PointsLabel" type="Label" parent="."]
 offset_left = 993.0
@@ -152,9 +308,33 @@ text = "0 Points / Second"
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Fofao"]
 texture_filter = 1
-position = Vector2(495, 442)
-scale = Vector2(1.546875, 2.397436)
+position = Vector2(448, 426)
+scale = Vector2(2.109, 3.268)
 sprite_frames = SubResource("SpriteFrames_choun")
+
+[node name="Mickey" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Mickey"]
+position = Vector2(604, 472)
+scale = Vector2(2.109, 2.936)
+sprite_frames = SubResource("SpriteFrames_a8y0u")
+
+[node name="CapitaoAmerica" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CapitaoAmerica"]
+position = Vector2(794.00006, 480.00003)
+scale = Vector2(2.109376, 2.397436)
+sprite_frames = SubResource("SpriteFrames_0ld40")
+
+[node name="HomemAranha" type="Node2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="HomemAranha"]
+position = Vector2(1015, 461)
+scale = Vector2(2.109, 2.109)
+sprite_frames = SubResource("SpriteFrames_y6deb")
 
 [connection signal="pressed" from="Panel/TruckButton" to="." method="_on_truck_button_pressed"]
 [connection signal="pressed" from="Panel/FofaoButton" to="." method="_on_fofao_button_pressed"]
+[connection signal="pressed" from="Panel/MickeyButton" to="." method="_on_mickey_button_pressed"]
+[connection signal="pressed" from="Panel/CAButton" to="." method="_on_ca_button_pressed"]
+[connection signal="pressed" from="Panel/HAButton" to="." method="_on_ha_button_pressed"]
